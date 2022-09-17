@@ -1,0 +1,10 @@
+<div>
+  <h2>Countries/Regions</h2>
+  <div class = "body">
+    <ul class="list">
+      <div *ngFor="let country of countryname">
+          <li><a routerLink="/details/{{this.country.Country}}" routerLinkActive="active">{{country.Country}}</a></li>
+      </div>
+    </ul>
+  </div>
+</div>

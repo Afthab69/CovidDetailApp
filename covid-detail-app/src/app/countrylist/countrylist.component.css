@@ -1,0 +1,31 @@
+h2{
+  text-align: center;
+}
+.bodys{
+  width:100%;
+  height: 100%;
+}
+ul{
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 4;
+}
+li{
+  list-style-type: square;
+}
+a:link { text-decoration: none;
+  color: black;}
+
+
+a:visited { text-decoration: none;
+color: black;
+}
+
+
+a:hover { text-decoration: none;
+color: #0096FF;}
+
+
+a:active { text-decoration: none;
+  color: black;}
+
