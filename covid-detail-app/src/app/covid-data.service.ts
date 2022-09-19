@@ -22,6 +22,14 @@ export class CovidDataService {
       let url = "https://api.covid19api.com/summary";
       return this.country.get(url);
     }
+    getDataByDate(countryname:string,start:String,end:String){
+      let x = "https://api.covid19api.com/country/";
+      let country = countryname;
+      let y = "?from="+start+"&to="+end;
+      let url = x+country+y;
+      console.log(url)
+      return this.country.get(url);
+    }
 }
 
 

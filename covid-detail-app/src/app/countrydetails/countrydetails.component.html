@@ -1,19 +1,21 @@
 <h2>{{this.deets[0].Country}}</h2>
 <div class="date">
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" *ngIf="expand===false">
     <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
-      <input matStartDate formControlName="start" placeholder="Start date">
-      <input matEndDate formControlName="end" placeholder="End date">
+      <input matStartDate formControlName="start" placeholder="Start date" [(ngModel)]="start">
+      <input matEndDate formControlName="end" placeholder="End date" [(ngModel)]="end">
     </mat-date-range-input>
+    <mat-hint>MM/DD/YYYY - MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-date-range-picker #picker></mat-date-range-picker>
 
     <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
     <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
   </mat-form-field>
+  <span><button type="button" (click)="getResult()" *ngIf="expand===false">Get Cases By Date</button></span>
+  <span><button type="button" (click)="getResult()" *ngIf="expand===true">Daily Cases</button></span>
 </div>
-
-<div class="box">
+<div class="box" *ngIf="expand===false">
   <div class="box1">
     <h3>Total Cases Reported Today: {{this.deets[0].NewConfirmed}}</h3>
     <h3>Total Deaths Reported Today:  {{this.deets[0].NewDeaths}}</h3>
@@ -22,6 +24,10 @@
     <h3>Total Cases:  {{this.deets[0].TotalConfirmed}}</h3>
     <h3>Total Deaths: {{this.deets[0].TotalDeaths}}</h3>
   </div>
+</div>
+<div class="box2" *ngIf="expand===true">
+  <h3>Total Cases in the given range:  {{this.cases}}</h3>
+  <h3>Total Deaths in the given range: {{this.deaths}}</h3>
 </div>
 
 

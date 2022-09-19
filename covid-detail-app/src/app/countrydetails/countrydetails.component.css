@@ -1,5 +1,6 @@
 h2,h3{
   text-align: center;
+  padding: 20px;
 }
 .box{
   display: grid;
@@ -10,7 +11,7 @@ h2,h3{
   margin-right: 25%;
   grid-gap:50px;
 }
-.box1{
+.box1,.box2{
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: whitesmoke;
@@ -24,3 +25,33 @@ h2,h3{
   align-items: center;
   display: flex;
 }
+.mat-form-field-flex{
+  background-color: black;
+  color: black;
+}
+.box2{
+  align-self: center;
+  padding:10px;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 20px;
+  /* grid-gap:50px; */
+}
+button{
+  background-color: whitesmoke;
+  border: none;
+  color: black;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 4px;
+  border-radius: 12px;
+  text-underline-offset: 0;
+  padding: 5px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #b40cc7;
+  color: white;
+}
+
