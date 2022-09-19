@@ -2,10 +2,11 @@
   text-align: center;
   display: flexbox;
 }
-h2{
+h1{
   color: black;
   margin-top: 0;
   padding: 10px;
+  font-weight: bold;
 }
 .navbar{
   display: block;

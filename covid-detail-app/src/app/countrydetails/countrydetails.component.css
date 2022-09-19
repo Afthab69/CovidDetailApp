@@ -1,12 +1,14 @@
-h2,h3{
+h1,h3{
   text-align: center;
   padding: 20px;
+  font-weight: bold;
 }
 .box{
   display: grid;
   grid-template-columns: auto auto;
   padding:10px;
   align-items: center;
+  margin-top: 1%;
   margin-left: 25%;
   margin-right: 25%;
   grid-gap:50px;
@@ -21,9 +23,9 @@ h2,h3{
   width: 100%;
   margin-top: 0;
 }
-.mat-calender-table{
+::ng-deep .mat-calender-table{
   align-items: center;
-  display: flex;
+  color: #b40cc7;
 }
 .mat-form-field-flex{
   background-color: black;
@@ -54,4 +56,15 @@ button:hover{
   background-color: #b40cc7;
   color: white;
 }
-
+::ng-deep .mat-form-field-wrapper{
+  background-color: whitesmoke;
+  border: 0.5px silver;
+  border-radius: 12px;
+}
+::ng-deep .mat-hint{
+  color: black;
+}
+::ng-deep .mat-focus-indicator{
+  background-color: #976ec2;
+  color: white;
+}
